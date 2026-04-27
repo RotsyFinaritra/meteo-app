@@ -1,0 +1,20 @@
+🟢 Essentielles (parfaites pour débuter)
+
+Recherche d'une ville par nom
+Affichage de la météo actuelle (température, conditions, humidité, vent)
+Icône météo dynamique selon les conditions (soleil, pluie, nuages…)
+Gestion des erreurs (ville introuvable, pas de connexion)
+
+🟡 Intermédiaires (pour aller plus loin)
+
+Prévisions sur 5 jours
+Bascule °C / °F
+Géolocalisation automatique (météo de ta position actuelle)
+Historique des villes récemment recherchées
+
+🔴 Avancées (si tu veux te challenger)
+
+Fond d'écran dynamique selon la météo (pluie → fond gris, soleil → fond bleu…)
+Mode sombre / clair
+Carte interactive avec la météo par zone
+Favoris sauvegardés (localStorage)
