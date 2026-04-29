@@ -1,0 +1,61 @@
+.home-page {
+  min-height: 100vh;
+  background: #0a1628;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, #1a3a6b66 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 80% 20%, #f5a62308 0%, transparent 60%);
+  font-family: 'Sora', sans-serif;
+}
+
+.home-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.home-search-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-greeting {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e8f4fd;
+  letter-spacing: -0.02em;
+}
+
+.home-subtitle {
+  font-size: 0.88rem;
+  color: #7aa8cc;
+  margin-bottom: 0.75rem;
+}
+
+.home-error {
+  background: #ff6b6b18;
+  border: 1px solid #ff6b6b44;
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  color: #ff6b6b;
+  font-size: 0.88rem;
+  text-align: center;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%       { transform: translateX(-6px); }
+  75%       { transform: translateX(6px); }
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
