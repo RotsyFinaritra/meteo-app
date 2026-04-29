@@ -8,4 +8,5 @@ export interface User {
 export interface AuthState {
   user: User | null
   loading: boolean
+  updateUnit: (unit: 'celsius' | 'fahrenheit') => void
 }

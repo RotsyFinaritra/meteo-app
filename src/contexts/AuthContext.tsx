@@ -2,11 +2,17 @@ import { createContext, useContext, useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
 import type { AuthState, User } from '../types/auth'
 
-const AuthContext = createContext<AuthState>({ user: null, loading: true })
+const AuthContext = createContext<AuthState>({ user: null, loading: true, updateUnit: () => { } })
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
+
+  const updateUnit = async (unit: 'celsius' | 'fahrenheit') => {
+    if (!user) return
+    await supabase.from('profiles').update({ preferred_unit: unit }).eq('id', user.id)
+    setUser({ ...user, preferred_unit: unit })
+  }
 
   useEffect(() => {
     // Récupérer la session active au chargement
@@ -46,7 +52,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   return (
-    <AuthContext.Provider value={{ user, loading }}>
+    <AuthContext.Provider value={{ user, loading, updateUnit }}>
       {children}
     </AuthContext.Provider>
   )
