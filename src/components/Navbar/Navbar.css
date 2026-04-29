@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #0a1628ee, #0f2645ee);
+  border-bottom: 1px solid #1a3a6b;
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'Sora', sans-serif;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.navbar-icon {
+  font-size: 1.6rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-4px); }
+}
+
+.navbar-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e8f4fd;
+  letter-spacing: -0.02em;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-username {
+  font-size: 0.85rem;
+  color: #7aa8cc;
+  font-family: 'DM Mono', monospace;
+}
+
+.navbar-signout {
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border: 1px solid #1a3a6b;
+  border-radius: 8px;
+  color: #7aa8cc;
+  font-size: 0.8rem;
+  font-family: 'Sora', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar-signout:hover {
+  border-color: #f5a623;
+  color: #f5a623;
+  background: #f5a62310;
+}

@@ -1,0 +1,123 @@
+.weather-card {
+  background: linear-gradient(145deg, #0f2645cc, #0a1628ee);
+  border: 1px solid #1a3a6b;
+  border-radius: 24px;
+  padding: 1.75rem;
+  font-family: 'Sora', sans-serif;
+  animation: fadeUp 0.4s ease both;
+  box-shadow: 0 16px 48px #00000044;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.weather-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.weather-city {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e8f4fd;
+  letter-spacing: -0.02em;
+}
+
+.weather-country {
+  font-size: 0.8rem;
+  color: #7aa8cc;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.favorite-btn {
+  font-size: 1.6rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #7aa8cc;
+  transition: transform 0.2s ease, color 0.2s ease;
+  line-height: 1;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.2);
+}
+
+.favorite-btn.active {
+  color: #f5a623;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 12px #f5a62344);
+}
+
+.weather-temp {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #e8f4fd;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.weather-desc {
+  font-size: 0.95rem;
+  color: #7aa8cc;
+  margin-top: 0.3rem;
+  text-transform: capitalize;
+}
+
+.weather-feels {
+  font-size: 0.8rem;
+  color: #7aa8cc88;
+  margin-top: 0.2rem;
+}
+
+.weather-details {
+  display: flex;
+  gap: 1rem;
+}
+
+.weather-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff06;
+  border: 1px solid #1a3a6b;
+  border-radius: 14px;
+  padding: 0.75rem;
+  gap: 0.25rem;
+}
+
+.detail-icon {
+  font-size: 1.2rem;
+}
+
+.detail-label {
+  font-size: 0.7rem;
+  color: #7aa8cc;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'DM Mono', monospace;
+}
+
+.detail-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e8f4fd;
+}
